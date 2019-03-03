@@ -38,8 +38,16 @@ __ADD SCREEN__
 
 The user can change the parameters of the environment according to his needs. Those are:
 
-
 ### Using PPO and Build-In Semantic Segmentation
+
+This is the default setup for the environment.
+
+#### Training
+To train the robot from the scratch using PPO, simply run the command:
+```final_model_ppo_no_segmentation```
+
+#### Inference
+To run the inference and see the robot in action, drag ```final_model_ppo_no_segmentation``` into .... and then press ... .
 
 ### Using Imitation Learning
 
