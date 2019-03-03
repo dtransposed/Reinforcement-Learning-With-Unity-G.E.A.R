@@ -10,7 +10,9 @@ The purpose of this project was to broaden our knowledge in the areas of Reinfor
 ### Files and Directories
 
 __images__: Sample images from the training set, which has been used for Semantic Segmentation network training.
+
 __unity-environment__: Contains the whole environment, which can be opened in Unity3D and run (training or inference) using ML-Agents.
+
 __pre-trained-models__: Contains pre-trained models (ML-Agents model or Semantic Segmentation).
 
 ### Prerequisites
