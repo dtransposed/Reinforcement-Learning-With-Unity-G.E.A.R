@@ -20,20 +20,24 @@ __pre-trained-models__: Contains pre-trained models (ML-Agents model or Semantic
 Before you run the project, you need to install:
 
 * [Unity 3D and Unity ML-Agents Toolkit](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md) 
+* OpenCV Python ```sudo apt-get install python-opencv```
 
 ## Installing
 
 To run the project:
 ```
-Open the .... project using Unity 3D. Additionally, please sure that the ML-Agents Toolkit (including TensorFlowSharp) is correctly installed.
+Open the .... project using Unity 3D. Additionally, please sure that the ML-Agents Toolkit (including TensorFlowSharp) is correctly installed and you are operating in the >>ml-agents<< environment.
 ```
 You should be welcomed by the following view:
 
 __ADD SCREEN__
 
-## Parameters 
-
 ## G.E.A.R Training & Inference
+
+### Setting the Parameters of the Environment 
+
+The user can change the parameters of the environment according to his needs. Those are:
+
 
 ### Using PPO and Build-In Semantic Segmentation
 
