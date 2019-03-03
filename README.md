@@ -16,7 +16,7 @@ What things you need to install the software and how to install them
 
 * [Unity 3D and Unity ML-Agents Toolkit](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md) 
 
-### Installing
+## Installing
 
 A step by step series of examples that tell you how to get a development env running
 
@@ -34,35 +34,24 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+### G.E.A.R Training & Inference
 
-Explain how to run the automated tests for this system
+## Using PPO and Build-In Semantic Segmentation
 
-### Break down into end to end tests
+## Using Imitation Learning
 
-Explain what these tests test and why
+## Using Heuristic
 
-```
-Give an example
-```
+## Using PPO and Custom Semantic Segmentation
 
-### And coding style tests
 
-Explain what these tests test and why
 
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Authors
 
 * **Damian Bogunowicz** - [dtransposed](https://dtransposed.github.io)
 * **Sangram Gupta** - [PurpleBooth](https://github.com/PurpleBooth)
-* **HyunJung Jung** - [PurpleBooth](https://github.com/PurpleBooth)
+* **HyunJung Jung** - [HyunJungs's LinkedIn](https://www.linkedin.com/in/hyun-jun-jung-1a5b45107)
 
 ## Acknowledgments
 We would like to thank:
