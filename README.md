@@ -34,15 +34,15 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-### G.E.A.R Training & Inference
+## G.E.A.R Training & Inference
 
-## Using PPO and Build-In Semantic Segmentation
+### Using PPO and Build-In Semantic Segmentation
 
-## Using Imitation Learning
+### Using Imitation Learning
 
-## Using Heuristic
+### Using Heuristic
 
-## Using PPO and Custom Semantic Segmentation
+### Using PPO and Custom Semantic Segmentation
 
 
 
