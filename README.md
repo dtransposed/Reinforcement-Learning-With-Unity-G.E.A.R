@@ -17,27 +17,21 @@ __pre-trained-models__: Contains pre-trained models (ML-Agents model or Semantic
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Before you run the project, you need to install:
 
 * [Unity 3D and Unity ML-Agents Toolkit](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md) 
 
 ## Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
+To run the project:
 ```
-Give the example
+Open the .... project using Unity 3D. Additionally, please sure that the ML-Agents Toolkit (including TensorFlowSharp) is correctly installed.
 ```
+You should be welcomed by the following view:
 
-And repeat
+__ADD SCREEN__
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+## Parameters 
 
 ## G.E.A.R Training & Inference
 
