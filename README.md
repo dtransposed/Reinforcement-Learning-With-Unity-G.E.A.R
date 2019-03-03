@@ -49,11 +49,18 @@ To train the robot from the scratch using PPO, simply run the command:
 #### Inference
 To run the inference and see the robot in action, drag ```final_model_ppo_no_segmentation``` into .... and then press ... .
 
+### Using PPO and Custom Semantic Segmentation
+
+To change from default setup to the one which uses external Semantic Segmentation Network (a SegNet, trained using [Semantic Segmentation Suite](https://github.com/GeorgeSeif/Semantic-Segmentation-Suite)):
+
+Change camera input to RGB
+Change RGB resolution to 512x512, remove black and white.
+
 ### Using Imitation Learning
 
 ### Using Heuristic
 
-### Using PPO and Custom Semantic Segmentation
+
 
 
 
