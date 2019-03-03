@@ -5,10 +5,13 @@ This is a project completed by three students (Damian Bogunowicz, Sangram Gupta,
 
 The purpose of this project was to broaden our knowledge in the areas of Reinforcement Learning, Game Development and 3D Computer Vision. If you would like to get more familiar with our work, the detailed description of the project can be found [here](www.todo.com)
 
-
-
 ## Getting Started
 
+### Files and Directories
+
+images: ```Sample images from the training set, which has been used for Semantic Segmentation network training.```
+unity-environment: ```Contains the whole environment, which can be opened in Unity3D and run (training or inference) using ML-Agents.```
+pre-trained-models: ```Contains pre-trained models (ML-Agents model or Semantic Segmentation)```
 
 ### Prerequisites
 
