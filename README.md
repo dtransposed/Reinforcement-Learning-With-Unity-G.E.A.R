@@ -1,7 +1,5 @@
 # Reinforcement Learning With Unity - Garbage Evaporating Autonomous Robot
-{:refdef: style="text-align: center;"}
 ![My Image](/GEAR-cover.png)
-{: refdef}
 
 This is a project completed by three students (Damian Bogunowicz, Sangram Gupta, HyunJung Jung) in conjunction with the Chair for Computer Aided Medical Procedures & Augmented Reality of the Technical Universitz of Munich. For this project we have been awarded with grade ... .We have created a prototype of an autonomous, intelligent agent for garbage collection named G.E.A.R (Garbage Evaporating Autonomous Robot). The goal of the agent is collect relevant pieces of garbage, while avoiding collisions with static objects (such as chairs or tables). The input, which allows the agent to navigate environment (a mock-up of German Oktoberfest tent) is the camera's RGBD input. 
 
