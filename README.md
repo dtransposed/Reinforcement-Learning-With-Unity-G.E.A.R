@@ -55,7 +55,7 @@ To train the robot from the scratch using PPO, simply run the command:
 ```final_model_ppo_no_segmentation```
 
 #### Inference
-To run the inference and see the robot in action, drag ```final_model_ppo_no_segmentation``` into .... and then press ... .
+Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the inference and see the robot in action, drag ```pre-trained-models/PPO.bytes``` into ```Graph Model``` and run the simulation.
 
 ### Using PPO and Custom Semantic Segmentation
 
