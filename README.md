@@ -61,6 +61,10 @@ Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the infere
 
 To change from default setup to the one which uses external Semantic Segmentation Network (a SegNet, trained using [Semantic Segmentation Suite](https://github.com/GeorgeSeif/Semantic-Segmentation-Suite)):
 
+1. In ```HuggerAgent``` under ```Hugger Agent (Script)``` change ```Camera 1``` from ```SegmentationCameraOneHot``` to ```RGBCamera```
+2. In ```Academy/Brain``` set ```Element 0/Width``` to 512 and ```Element 0/Height``` to 512. Switch off ```Element 0/Black And W```
+3. Run the simulation.
+
 Change camera input to RGB
 Change RGB resolution to 512x512, remove black and white.
 
