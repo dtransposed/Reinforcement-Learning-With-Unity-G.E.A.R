@@ -1,9 +1,9 @@
 # Reinforcement Learning With Unity - Garbage Evaporating Autonomous Robot
 ![My Image](/GEAR-cover.png)
 
-This is a project completed by three students (Damian Bogunowicz, Sangram Gupta, HyunJung Jung) in conjunction with the Chair for Computer Aided Medical Procedures & Augmented Reality of the Technical Universitz of Munich. For this project we have been awarded with grade ... .We have created a prototype of an autonomous, intelligent agent for garbage collection named G.E.A.R (Garbage Evaporating Autonomous Robot). The goal of the agent is collect relevant pieces of garbage, while avoiding collisions with static objects (such as chairs or tables). The input, which allows the agent to navigate environment (a mock-up of German Oktoberfest tent) is the camera's RGBD input. 
+This is a project completed by three students (Damian Bogunowicz, Sangram Gupta, HyunJung Jung) in conjunction with the Chair for Computer Aided Medical Procedures & Augmented Reality of the Technical Universitz of Munich. For this project we have been awarded with maximum grade 1.0. We have created a prototype of an autonomous, intelligent agent for garbage collection named G.E.A.R (Garbage Evaporating Autonomous Robot). The goal of the agent is collect relevant pieces of garbage, while avoiding collisions with static objects (such as chairs or tables). The agent navigates in the environment (a mock-up of German Oktoberfest tent) using camera RBG-D input.
 
-The purpose of this project was to broaden our knowledge in the areas of Reinforcement Learning, Game Development and 3D Computer Vision. If you would like to get more familiar with our work, the detailed description of the project can be found [here](www.todo.com)
+The purpose of this project was to broaden our knowledge in the areas of Reinforcement Learning, Game Development and 3D Computer Vision. If you would like to get more familiar with our work, the detailed description of the project in form of a blogpost can be found [here](https://dtransposed.github.io/blog/GEAR.html)
 
 ## Getting Started
 
