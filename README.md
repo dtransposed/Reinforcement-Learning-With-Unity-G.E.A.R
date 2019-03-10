@@ -36,6 +36,9 @@ You should be welcomed by the following view:
 
 2. Replace the ```ml-agents``` library (in the virtual environment created during ML-Agents toolkit installation) with ```/unity-environment/gear-unity```  
 
+3. Open the script ```.../mlagents/trainers/trainer_controller.py``` and edit lines ```313``` and ```343``` by replacing the current path to the SegNet .cpkt files (```pre-trained-models/latest_model_Encoder-Decoder-Skip_Dataset.cktp```) with your path. This unelegant workaround can be skipped, if one does not want to use SegNet for training.
+
+
 ## G.E.A.R Training & Inference
 
 ### Setting the Parameters of the Environment 
@@ -55,11 +58,13 @@ To train the robot from the scratch using PPO, simply run the command:
 Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the inference and see the robot in action, drag ```pre-trained-models/PPO.bytes``` into ```Graph Model``` and run the simulation.
 
 ### Using PPO and Custom Semantic Segmentation
-
+---
 To change from default setup to the one which uses external Semantic Segmentation Network (a SegNet, trained using [Semantic Segmentation Suite](https://github.com/GeorgeSeif/Semantic-Segmentation-Suite)):
 
 1. In ```HuggerAgent``` under ```Hugger Agent (Script)``` change ```Camera 1``` from ```SegmentationCameraOneHot``` to ```RGBCamera```.
 2. In ```Academy/Brain``` set ```Element 0/Width``` to 512 and ```Element 0/Height``` to 512. Switch off ```Element 0/Black And W```.
+3.
+
 ##### Training
 In ```gear-unity/trainer_config.yaml``` set ```segmentation: true```. Then, run ```mlagents-learn trainer_config.yaml --run-id=test_run --train --slow```.
 
@@ -69,7 +74,7 @@ Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the infere
 ### Using Imitation Learning
 ---
 ##### Training
-For instructions how to train an agent simply apply steps from the (official instruction)[https://blogs.unity3d.com/2018/05/24/imitation-learning-in-unity-the-workflow/]
+For instructions how to train an agent simply apply steps from the [official instruction](https://blogs.unity3d.com/2018/05/24/imitation-learning-in-unity-the-workflow/)
 ##### Inference
 Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the inference and see the robot in action, drag ```pre-trained-models/BC.bytes``` into ```Graph Model``` and run the simulation.
 
