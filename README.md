@@ -77,6 +77,7 @@ Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the infere
 
 ### Using Heuristic
 
+In ```gear-unity/trainer_config.yaml``` set ```heuristics: true```. Then, run ```mlagents-learn trainer_config.yaml --run-id=test_run --train --slow```.
 
 #### Inference
 Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the inference and see the robot in action, drag ```pre-trained-models/Heuristic.bytes``` into ```Graph Model``` and run the simulation.
