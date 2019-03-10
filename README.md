@@ -67,14 +67,14 @@ In ```gear-unity/trainer_config.yaml``` set ```segmentation: true```. Then, run 
 Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the inference and see the robot in action, drag ```pre-trained-models/PPOSegNet.bytes``` into ```Graph Model``` and run the simulation.
 
 ### Using Imitation Learning
-
+---
 ##### Training
-__TODO__
+For instructions how to train an agent simply apply steps from the (official instruction)[https://blogs.unity3d.com/2018/05/24/imitation-learning-in-unity-the-workflow/]
 ##### Inference
 Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the inference and see the robot in action, drag ```pre-trained-models/BC.bytes``` into ```Graph Model``` and run the simulation.
 
 ### Using Heuristic
-
+---
 ##### Training
 In ```gear-unity/trainer_config.yaml``` set ```heuristics: true```. Then, run ```mlagents-learn trainer_config.yaml --run-id=test_run --train --slow```.
 ##### Inference
