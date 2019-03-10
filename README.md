@@ -34,7 +34,7 @@ You should be welcomed by the following view:
 ![My Image](/menu.png)
 
 
-2. Replace your ```ml-agents``` library with ```/unity-environment/gear-unity```  
+2. Replace the ```ml-agents``` library (in the virtual environment created during ML-Agents toolkit installation) with ```/unity-environment/gear-unity```  
 
 
 
