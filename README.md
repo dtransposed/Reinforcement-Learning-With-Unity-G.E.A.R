@@ -49,22 +49,19 @@ This is the default setup for the environment.
 
 ##### Training
 To train the robot from the scratch using PPO, simply run the command:
-```final_model_ppo_no_segmentation```
+```mlagents-learn trainer_config.yaml --run-id=test_run --train --slow```.
 
 ##### Inference
 Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the inference and see the robot in action, drag ```pre-trained-models/PPO.bytes``` into ```Graph Model``` and run the simulation.
 
 ### Using PPO and Custom Semantic Segmentation
 
-##### Training
-__TODO__
-
 To change from default setup to the one which uses external Semantic Segmentation Network (a SegNet, trained using [Semantic Segmentation Suite](https://github.com/GeorgeSeif/Semantic-Segmentation-Suite)):
 
 1. In ```HuggerAgent``` under ```Hugger Agent (Script)``` change ```Camera 1``` from ```SegmentationCameraOneHot``` to ```RGBCamera```.
 2. In ```Academy/Brain``` set ```Element 0/Width``` to 512 and ```Element 0/Height``` to 512. Switch off ```Element 0/Black And W```.
 ##### Training
-__TODO__
+In ```gear-unity/trainer_config.yaml``` set ```segmentation: true```. Then, run ```mlagents-learn trainer_config.yaml --run-id=test_run --train --slow```.
 
 ##### Inference
 Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the inference and see the robot in action, drag ```pre-trained-models/PPOSegNet.bytes``` into ```Graph Model``` and run the simulation.
