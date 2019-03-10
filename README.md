@@ -28,12 +28,15 @@ Before you run the project, you need to install:
 
 To run the project:
 
-*Open the ```/unity-environment/gear-unity``` project using Unity 3D. Additionally, please sure that the ML-Agents Toolkit (including TensorFlowSharp) is correctly installed*
-
-
-and you are operating in the >>ml-agents<< environment.
+1. Open the ```/unity-environment/gear-unity``` project using Unity 3D. Additionally, please sure that the ML-Agents Toolkit (including TensorFlowSharp) is correctly installed
 
 You should be welcomed by the following view:
+![My Image](/menu.png)
+
+
+2. Replace your ```ml-agents``` library with ```/unity-environment/gear-unity```  
+
+
 
 __ADD SCREEN__
 
