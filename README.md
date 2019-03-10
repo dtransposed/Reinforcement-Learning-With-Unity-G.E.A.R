@@ -36,50 +36,51 @@ You should be welcomed by the following view:
 
 2. Replace the ```ml-agents``` library (in the virtual environment created during ML-Agents toolkit installation) with ```/unity-environment/gear-unity```  
 
-
-
-__ADD SCREEN__
-
 ## G.E.A.R Training & Inference
 
 ### Setting the Parameters of the Environment 
 
 The user can change the parameters of the environment according to his needs. Those are:
 
+
 ### Using PPO and Build-In Semantic Segmentation
 
 This is the default setup for the environment.
 
-#### Training
+##### Training
 To train the robot from the scratch using PPO, simply run the command:
 ```final_model_ppo_no_segmentation```
 
-#### Inference
+##### Inference
 Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the inference and see the robot in action, drag ```pre-trained-models/PPO.bytes``` into ```Graph Model``` and run the simulation.
 
 ### Using PPO and Custom Semantic Segmentation
+
+##### Training
+__TODO__
 
 To change from default setup to the one which uses external Semantic Segmentation Network (a SegNet, trained using [Semantic Segmentation Suite](https://github.com/GeorgeSeif/Semantic-Segmentation-Suite)):
 
 1. In ```HuggerAgent``` under ```Hugger Agent (Script)``` change ```Camera 1``` from ```SegmentationCameraOneHot``` to ```RGBCamera```.
 2. In ```Academy/Brain``` set ```Element 0/Width``` to 512 and ```Element 0/Height``` to 512. Switch off ```Element 0/Black And W```.
-3. Run the simulation.
+##### Training
+__TODO__
 
-Change camera input to RGB
-Change RGB resolution to 512x512, remove black and white.
+##### Inference
+Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the inference and see the robot in action, drag ```pre-trained-models/PPOSegNet.bytes``` into ```Graph Model``` and run the simulation.
 
 ### Using Imitation Learning
 
-#### Inference
+##### Training
+__TODO__
+##### Inference
 Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the inference and see the robot in action, drag ```pre-trained-models/BC.bytes``` into ```Graph Model``` and run the simulation.
-
-
 
 ### Using Heuristic
 
+##### Training
 In ```gear-unity/trainer_config.yaml``` set ```heuristics: true```. Then, run ```mlagents-learn trainer_config.yaml --run-id=test_run --train --slow```.
-
-#### Inference
+##### Inference
 Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the inference and see the robot in action, drag ```pre-trained-models/Heuristic.bytes``` into ```Graph Model``` and run the simulation.
 
 ## Authors
