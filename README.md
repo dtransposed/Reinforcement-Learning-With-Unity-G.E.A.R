@@ -36,11 +36,7 @@ You should be welcomed by the following view:
 
 2. Replace the ```ml-agents``` library (in the virtual environment created during ML-Agents toolkit installation) with our ```ml-agents```.  
 
-3. Then, put ```pre-trained-models/latest_model_Encoder-Decoder-Skip_Dataset.cktp``` into ```.../mlagents/trainers/models/```. Finally, open the script ```.../mlagents/trainers/trainer_controller.py``` and edit lines ```313``` and ```343``` by replacing the current path to the SegNet .cpkt files with your path:
-
-```.../mlagents/trainers/models/latest_model_Encoder-Decoder-Skip_Dataset.cktp```
-
-This inelegant workaround can be skipped, if one does not want to use SegNet for training.
+3. Then, put ```pre-trained-models/latest_model_Encoder-Decoder-Skip_Dataset.cktp``` into ```.../mlagents/trainers/models/```. Finally, open the script ```.../mlagents/trainers/trainer_controller.py``` and edit lines ```313``` and ```343``` by replacing the current path to the SegNet .cpkt files with your path: ```.../mlagents/trainers/models/latest_model_Encoder-Decoder-Skip_Dataset.cktp``` (This inelegant workaround can be skipped, if one does not want to use SegNet for training.)
 
 ## G.E.A.R Training & Inference
 
