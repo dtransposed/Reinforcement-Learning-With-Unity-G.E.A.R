@@ -13,9 +13,9 @@ __images__: Sample images from the training set, which has been used for trainin
 
 __unity-environment__: Contains the whole environment, which can be opened in Unity 3D and run (training or inference) using ML-Agents.
 
-__ml-agents environment__: Contains the ml-agents library, modified for the purpose of this project.
+__ml-agents__: Contains the ml-agents library, modified for the purpose of this project.
 
-__pre-trained-models__: Contains pre-trained models (ML-Agents model or Semantic Segmentation).
+__pre-trained-models__: Contains pre-trained models (ML-Agents model or Semantic Segmentation model).
 
 ### Prerequisites
 
@@ -34,20 +34,37 @@ You should be welcomed by the following view:
 ![My Image](/menu.png)
 
 
-2. Replace the ```ml-agents``` library (in the virtual environment created during ML-Agents toolkit installation) with ```/unity-environment/gear-unity```  
+2. Replace the ```ml-agents``` library (in the virtual environment created during ML-Agents toolkit installation) with our ```ml-agents```.  
 
-3. Open the script ```.../mlagents/trainers/trainer_controller.py``` and edit lines ```313``` and ```343``` by replacing the current path to the SegNet .cpkt files (```pre-trained-models/latest_model_Encoder-Decoder-Skip_Dataset.cktp```) with your path. This unelegant workaround can be skipped, if one does not want to use SegNet for training.
+3. Then, put ```pre-trained-models/latest_model_Encoder-Decoder-Skip_Dataset.cktp``` into ```.../mlagents/trainers/models/```. Finally, open the script ```.../mlagents/trainers/trainer_controller.py``` and edit lines ```313``` and ```343``` by replacing the current path to the SegNet .cpkt files with your path:
 
+```.../mlagents/trainers/models/latest_model_Encoder-Decoder-Skip_Dataset.cktp```
+
+This inelegant workaround can be skipped, if one does not want to use SegNet for training.
 
 ## G.E.A.R Training & Inference
 
 ### Setting the Parameters of the Environment 
 
-The user can change the parameters of the environment according to his needs. Those are:
-
+The user can change the parameters of the environment according to his needs. The parameters can be found in ```Academy```. Those are:
+1. __Parameters regarding the respawn of static objects (chairs and tables)__:
+  -Table Pos Max Offset
+  -Table Rotation Max
+  -Chair Pos Max Offset
+  -Spawn Area
+  -N Spawn Xdir
+  -N Spawn Zdir
+2. __Parameters regarding the respawn of items (collectibles and non-collectibles)__:
+  -N Garbages
+  -Garbage Spawn Height
+  -Ratio Wurst
+  -Ratio Bread
+  -Ratio Cup
+  -N Valuables
+  -Valuable Spawn Height
 
 ### Using PPO and Build-In Semantic Segmentation
-
+---
 This is the default setup for the environment.
 
 ##### Training
@@ -63,7 +80,6 @@ To change from default setup to the one which uses external Semantic Segmentatio
 
 1. In ```HuggerAgent``` under ```Hugger Agent (Script)``` change ```Camera 1``` from ```SegmentationCameraOneHot``` to ```RGBCamera```.
 2. In ```Academy/Brain``` set ```Element 0/Width``` to 512 and ```Element 0/Height``` to 512. Switch off ```Element 0/Black And W```.
-3.
 
 ##### Training
 In ```gear-unity/trainer_config.yaml``` set ```segmentation: true```. Then, run ```mlagents-learn trainer_config.yaml --run-id=test_run --train --slow```.
@@ -87,9 +103,9 @@ Set ```Brain Type``` in ```Academy/Brain``` to ```Internal```. To run the infere
 
 ## Authors
 
-* **Damian Bogunowicz** - [dtransposed](https://dtransposed.github.io)
-* **Sangram Gupta** - [todo](https://todo.com)
-* **HyunJung Jung** - [HyunJungs](https://www.linkedin.com/in/hyun-jun-jung-1a5b45107)
+* **[Damian Bogunowicz](https://dtransposed.github.io)** 
+* **Sangram Gupta**
+* **[HyunJung Jung](https://www.linkedin.com/in/hyun-jun-jung-1a5b45107)**
 
 ## Acknowledgments
 We would like to thank:
