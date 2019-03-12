@@ -64,7 +64,7 @@ class TrainerController(object):
             self.trainer_config_path = \
                 '/{docker_target_name}/{trainer_config_path}'.format(
                     docker_target_name=docker_target_name,
-                    trainer_config_path = trainer_config_path)
+                    trainer_config_path=trainer_config_path)
             self.model_path = '/{docker_target_name}/models/{run_id}'.format(
                 docker_target_name=docker_target_name,
                 run_id=run_id)
@@ -116,20 +116,20 @@ class TrainerController(object):
                     raise MetaCurriculumError('One of the curriculums '
                                               'defined in ' +
                                               self.curriculum_folder + ' '
-                                              'does not have a corresponding '
-                                              'Brain. Check that the '
-                                              'curriculum file has the same '
-                                              'name as the Brain '
-                                              'whose curriculum it defines.')
+                                                                       'does not have a corresponding '
+                                                                       'Brain. Check that the '
+                                                                       'curriculum file has the same '
+                                                                       'name as the Brain '
+                                                                       'whose curriculum it defines.')
 
     def _get_measure_vals(self):
         if self.meta_curriculum:
             brain_names_to_measure_vals = {}
             for brain_name, curriculum \
-                in self.meta_curriculum.brains_to_curriculums.items():
+                    in self.meta_curriculum.brains_to_curriculums.items():
                 if curriculum.measure == 'progress':
                     measure_val = (self.trainers[brain_name].get_step /
-                        self.trainers[brain_name].get_max_steps)
+                                   self.trainers[brain_name].get_max_steps)
                     brain_names_to_measure_vals[brain_name] = measure_val
                 elif curriculum.measure == 'reward':
                     measure_val = np.mean(self.trainers[brain_name]
@@ -228,11 +228,11 @@ class TrainerController(object):
                     trainer_parameters_dict[brain_name], self.train_model,
                     self.seed, self.run_id)
             elif trainer_parameters_dict[brain_name]['trainer'] == 'ppo':
-                
+
                 ###############################################################################
                 #######         External brain becomes internal brain in here        ##########
                 ###############################################################################
-                
+
                 self.trainers[brain_name] = PPOTrainer(
                     sess, self.env.brains[brain_name],
                     self.meta_curriculum
@@ -305,19 +305,23 @@ class TrainerController(object):
             init = tf.global_variables_initializer()
             saver = tf.train.Saver(max_to_keep=self.keep_checkpoints)
             # Instantiate model parameters
-            if self.load_model: 
-                
+            if self.load_model:
+
                 if 'segmentation' in trainer_config['default'] and trainer_config['default']['segmentation']:
-                    
-                    saver_seg = tf.train.Saver(var_list=tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='segmentation'))
-                    saver_seg.restore(sess, 'C:/Users/kkk/Anaconda3/envs/ml-agents/Lib/site-packages/mlagents/trainers/models/latest_model_Encoder-Decoder-Skip_Dataset.ckpt')
+
+                    saver_seg = tf.train.Saver(
+                        var_list=tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='segmentation'))
+                    saver_seg.restore(sess,
+                                      'C:/tools/Anaconda3/envs/ml-agents/Lib/site-packages/mlagents/trainers/models/latest_model_Encoder-Decoder-Skip_Dataset.ckpt')
                     print("============================= segmentation loaded ================================")
-                    
-                    filtered_var_list = [each_variable for each_variable in tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES) if not each_variable.name.startswith('segmentation')]
+
+                    filtered_var_list = [each_variable for each_variable in
+                                         tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES) if
+                                         not each_variable.name.startswith('segmentation')]
                     saver_rl = tf.train.Saver(filtered_var_list)
-                    saver_rl.restore(sess, 'models/test_run-0/model-50000.cptk')
+                    saver_rl.restore(sess, 'E:/Code/TUM - Reinforcement final/models/test_run-0/model-50000.cptk')
                     print("============================= Model loaded ================================")
-                
+
                 else:
                     self.logger.info('Loading Model...')
                     ckpt = tf.train.get_checkpoint_state(self.model_path)
@@ -328,19 +332,21 @@ class TrainerController(object):
                                          .format(self.model_path))
                     saver.restore(sess, ckpt.model_checkpoint_path)
 
-                
+
 
             else:
                 sess.run(init)
                 #######################################################################################
-                ##########    Modify here for partialy load model --> for segmentation network    ##### 
+                ##########    Modify here for partialy load model --> for segmentation network    #####
                 #######################################################################################
 
                 if 'segmentation' in trainer_config['default'] and trainer_config['default']['segmentation']:
                     print("========== loading segmenation network ===============")
-                    saver_ = tf.train.Saver(var_list=tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='segmentation'))
-                    saver_.restore(sess, 'C:/Users/kkk/Anaconda3/envs/ml-agents/Lib/site-packages/mlagents/trainers/models/latest_model_Encoder-Decoder-Skip_Dataset.ckpt')
-                    
+                    saver_ = tf.train.Saver(
+                        var_list=tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='segmentation'))
+                    saver_.restore(sess,
+                                   'C:/tools/Anaconda3/envs/ml-agents/Lib/site-packages/mlagents/trainers/models/latest_model_Encoder-Decoder-Skip_Dataset.ckpt')
+
             global_step = 0  # This is only for saving the model
             curr_info = self._reset_env()
             if self.train_model:
@@ -350,11 +356,11 @@ class TrainerController(object):
             try:
                 while any([t.get_step <= t.get_max_steps \
                            for k, t in self.trainers.items()]) \
-                      or not self.train_model:
+                        or not self.train_model:
                     if self.meta_curriculum:
                         # Get the sizes of the reward buffers.
-                        reward_buff_sizes = {k:len(t.reward_buffer) \
-                                            for (k,t) in self.trainers.items()}
+                        reward_buff_sizes = {k: len(t.reward_buffer) \
+                                             for (k, t) in self.trainers.items()}
                         # Attempt to increment the lessons of the brains who
                         # were ready.
                         lessons_incremented = \
