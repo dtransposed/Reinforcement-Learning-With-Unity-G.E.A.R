@@ -48,20 +48,20 @@ This inelegant workaround can be skipped, if one does not want to use SegNet for
 
 The user can change the parameters of the environment according to his needs. The parameters can be found in ```Academy```. Those are:
 1. __Parameters regarding the respawn of static objects (chairs and tables)__:
-  -Table Pos Max Offset
-  -Table Rotation Max
-  -Chair Pos Max Offset
-  -Spawn Area
-  -N Spawn Xdir
-  -N Spawn Zdir
+  - Table Pos Max Offset
+  - Table Rotation Max
+  - Chair Pos Max Offset
+  - Spawn Area
+  - N Spawn Xdir
+   -N Spawn Zdir
 2. __Parameters regarding the respawn of items (collectibles and non-collectibles)__:
-  -N Garbages
-  -Garbage Spawn Height
-  -Ratio Wurst
-  -Ratio Bread
-  -Ratio Cup
-  -N Valuables
-  -Valuable Spawn Height
+  - N Garbages
+  - Garbage Spawn Height
+  - Ratio Wurst
+  - Ratio Bread
+  - Ratio Cup
+  - N Valuables
+  - Valuable Spawn Height
 
 ### Using PPO and Build-In Semantic Segmentation
 ---
