@@ -17,6 +17,11 @@ __ml-agents__: Contains the ml-agents library, modified for the purpose of this 
 
 __pre-trained-models__: Contains pre-trained models (ML-Agents model or Semantic Segmentation model).
 
+NOTE:
+Due to some recurring LFS bandwith issues some of the files may not get cloned properly. You can fetch them manually here:
+https://drive.google.com/file/d/1pE2as6-c7u456I3ivzY4aSyyOh3cMQkq/view?usp=sharing
+https://drive.google.com/file/d/1zzq5_OZPq00-9MKHzMbHgV2-aos78dAS/view?usp=sharing
+
 ### Prerequisites
 
 Before you run the project, you need to install:
